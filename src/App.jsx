@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  ChevronRight, ChevronLeft, Flag, Clock, ArrowRight, Info, BookOpen, Palette, Sparkles, MoveDiagonal, Sun
+  ChevronRight, ChevronLeft, Flag, Clock, ArrowRight, Info, BookOpen
 } from 'lucide-react';
 
 const FlagMotif = () => (
@@ -21,7 +21,7 @@ const App = () => {
       type: 'cover',
       title: 'ÉCLAT',
       sub: 'L\'ART COMME VOIX DE LA RÉVOLUTION',
-      detail: 'A Detailed Exploration of French Artistic Sovereignty',
+      detail: 'Une Exploration Détaillée de la Souveraineté Artistique Française',
       img: 'https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=1200',
       color: '#050505'
     },
@@ -29,18 +29,19 @@ const App = () => {
     {
       type: 'manifesto',
       title: 'PRÉFACE',
-      text: "Art serves as the ultimate mirror of a nation's soul. In France, the transition from the ornate indulgence of the monarchy to the gritty reality of the common man was not just a stylistic choice, but a revolutionary act. Each brushstroke was a call for liberty.",
+      text: "L'art sert de miroir ultime à l'âme d'une nation. En France, la transition de l'indulgence ornée de la monarchie à la dure réalité de l'homme du commun ne fut pas seulement un choix stylistique, mais un acte révolutionnaire. Chaque coup de pinceau fut un appel à la liberté.",
       quote: '“L\'art français a transformé la peinture en un mégaphone pour la liberté.”',
       color: '#0a0a0a'
     },
-    // 3. FRENCH RENAISSANCE (NEW)
+    // 3. FRENCH RENAISSANCE
     {
       type: 'renaissance',
       title: 'LA RENAISSANCE FRANÇAISE',
-      sub: 'The Rebirth of Classical Elegance',
-      content: "The French Renaissance (15th-17th century) was a pivotal movement where France transitioned out of the Middle Ages. Influenced by Italian masters like Leonardo da Vinci, invited by King Francis I, French art began to focus on humanism and classical symmetry. This era saw the rise of the School of Fontainebleau, which combined decorative mannerism with French courtly elegance. It was a time of grand chateaus and the first real 'star' artists of the kingdom. The movement laid the architectural and aesthetic foundation for the grandiosity that would eventually lead to the Rococo excess, serving as the first step in France's journey to becoming the world's art capital.",
-      img1: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Meister_der_Schule_von_Fontainebleau_001.jpg', // Corner Top-Left
-      img2: 'https://artincontext.org/wp-content/uploads/2023/08/Explore-Art-in-France.avif', // Corner Bottom-Right
+      sub: 'La Renaissance de l\'Élégance Classique',
+      content: "La Renaissance française (XVe-XVIIe siècles) fut un mouvement charnière par lequel la France sortit du Moyen Âge. Influencé par des maîtres italiens comme Léonard de Vinci, invités par le roi François Ier, l'art français a commencé à se concentrer sur l'humanisme et la symétrie classique. Cette époque a vu l'essor de l'École de Fontainebleau, qui combinait le maniérisme décoratif avec l'élégance de la cour française. Ce fut l'époque des grands châteaux et des premiers véritables artistes 'stars' du royaume. Ce mouvement a jeté les bases architecturales et esthétiques de la grandeur qui allait finalement mener à l'excès du Rococo, constituant la première étape du voyage de la France pour devenir la capitale mondiale de l'art.",
+      img1: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Meister_der_Schule_von_Fontainebleau_001.jpg/1280px-Meister_der_Schule_von_Fontainebleau_001.jpg',
+      img2: 'https://upload.wikimedia.org/wikipedia/commons/3/38/Jean_Cousin_the_Elder%2C_Eva_Prima_Pandora.jpg',
+      img3: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/S%C3%A9pulcre_Ligier_Richier_301008_02.jpg',
       color: '#151515'
     },
     // 4. COMPARISON TABLE
@@ -48,20 +49,20 @@ const App = () => {
       type: 'table',
       title: 'SOMMAIRE ANALYTIQUE',
       data: [
-        { era: 'Rococo', focus: 'Aristocratic Romance', mood: 'Ornate & Playful' },
-        { era: 'Romantisme', focus: 'Revolutionary Spirit', mood: 'Intense & Dramatic' },
-        { era: 'Réalisme', focus: 'The Working Class', mood: 'Social Truth' },
-        { era: 'Modernisme', focus: 'Modern Light', mood: 'Serene & Abstract' }
+        { era: 'Rococo', focus: 'Romance Aristocratique', mood: 'Orné et Ludique' },
+        { era: 'Romantisme', focus: 'Esprit Révolutionnaire', mood: 'Intense et Dramatique' },
+        { era: 'Réalisme', focus: 'La Classe Ouvrière', mood: 'Vérité Sociale' },
+        { era: 'Modernisme', focus: 'Lumière Moderne', mood: 'Serein et Abstrait' }
       ],
-      color: '#0f0f0f'
+      color: '#300505'
     },
     // --- ERA I: ROCOCO ---
     {
       type: 'splash',
       era: 'I',
-      title: 'L\'ÉRE DU ROCOCO',
-      dates: '1730s — 1760s',
-      intro: 'The final, extravagant breath of the French Monarchy, where art was a shield against reality.',
+      title: 'L\'ÈHRE DU ROCOCO',
+      dates: 'Années 1730 — 1760',
+      intro: 'Le dernier souffle extravagant de la monarchie française, où l\'art était un bouclier contre la réalité.',
       img: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&q=80&w=1200',
       color: '#1a1012',
       accent: '#fbcfe8'
@@ -69,51 +70,55 @@ const App = () => {
     {
       type: 'flowchart',
       title: 'CHRONOLOGIE DU ROCOCO',
+      img: 'https://thegourmetgazette.com/wp-content/uploads/2023/12/5.-anonyme-le-regent-et-son-fils-dans-son-cabinet-de-travail.jpg',
       steps: [
-        { year: '1715', t: 'Regency', d: 'The death of Louis XIV leads to a more relaxed and playful court style.' },
-        { year: '1730', t: 'Court Dominance', d: 'Boucher defines the aesthetic of the high aristocracy.' },
-        { year: '1750', t: 'Enlightenment', d: 'Philosophers begin to mock the "frivolous" nature of the art.' },
-        { year: '1763', t: 'State Defeat', d: 'Economic failure makes royal luxury look insulting to the poor.' }
+        { year: '1715', t: 'Régence', d: 'La mort de Louis XIV conduit à un style de cour plus détendu et ludique.' },
+        { year: '1730', t: 'Domination de la Cour', d: 'Boucher définit l\'esthétique de la haute aristocratie.' },
+        { year: '1750', t: 'Les Lumières', d: 'Les philosophes commencent à se moquer de la nature "frivole" de l\'art.' },
+        { year: '1763', t: 'Défaite de l\'État', d: 'L\'échec économique rend le luxe royal insultant pour les pauvres.' }
       ],
-      color: '#120a0d'
+      color: '#16090d'
     },
     {
       type: 'article',
       title: 'L\'ART DU DÉNI',
-      content: 'As France edged closer to financial collapse, the elite retreated into a world of pastel fantasies. Rococo paintings intentionally avoided the grit of the streets. They depicted a world that was eternally young, flirtatious, and wealthy. This "Art of Denial" unknowingly fueled the fire of the coming 1789 Revolution by visualizing the massive gap between the court and the citizens.',
-      sub: 'Aristocratic Escapism',
-      img: 'https://artincontext.org/wp-content/uploads/2023/08/Famous-French-Art.avif', 
+      content: 'Alors que la France se rapprochait de l\'effondrement financier, l\'élite se retira dans un monde de fantaisies pastel. Les peintures rococo évitaient intentionnellement la dureté des rues. Elles dépeignaient un monde éternellement jeune, coquet et riche. Cet "Art du Déni" a involontairement alimenté le feu de la Révolution de 1789 à venir en visualisant le fossé massif entre la cour et les citoyens.',
+      sub: 'Évasion Aristocratique',
+      img: 'https://artincontext.org/wp-content/uploads/2023/08/Famous-French-Art.avif',
       color: '#1a1012'
     },
     {
       type: 'spotlight',
       name: 'FRANÇOIS BOUCHER',
       dates: '1703 — 1770',
-      bio: "Boucher was the definitive painter of the French court. Appointed as the First Painter to the King, his work was inseparable from the influence of Madame de Pompadour. He was a master of the 'Pastoral Idyll', creating soft-focus mythological scenes that prioritized decorative beauty over moral weight. His influence extended to tapestries and porcelain, making him the most famous artist of his generation.",
+      bio: "Boucher fut le peintre définitif de la cour française. Nommé Premier Peintre du Roi, son œuvre était inséparable de l'influence de Madame de Pompadour. Il était passé maître dans l''Idylle Pastorale', créant des scènes mythologiques floues qui privilégiaient la beauté décorative au poids moral. Son influence s'est étendue aux tapisseries et à la porcelaine, faisant de lui l'artiste le plus célèbre de sa génération.",
       work: 'Le Triomphe de Vénus (1740)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/The_Triumph_of_Venus%2C_by_Fran%C3%A7ois_Boucher.jpg', 
-      caption: 'A masterpiece of sensual mythology and royal fantasy.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/a/a3/The_Triumph_of_Venus%2C_by_Fran%C3%A7ois_Boucher.jpg',
+      caption: 'Un chef-d\'œuvre de mythologie sensuelle et de fantaisie royale.',
       color: '#0d0809'
     },
     {
       type: 'spotlight',
       name: 'JEAN-HONORÉ FRAGONARD',
       dates: '1732 — 1806',
-      bio: "A student of Boucher, Fragonard took the Rococo style to its most flirtatious extremes. He was famous for his 'fluid' brushwork and his ability to capture fleeting moments of joy and eroticism. Though he won the Prix de Rome, he chose to work for private aristocratic patrons rather than the state, allowing him to produce the iconic, playful garden scenes for which he is remembered today.",
+      bio: "Élève de Boucher, Fragonard a poussé le style rococo à ses extrêmes les plus coquets. Il était célèbre pour son coup de pinceau 'fluide' et sa capacité à capturer des moments éphémères de joie et d'érotisme. Bien qu'il ait remporté le Prix de Rome, il a choisi de travailler pour des mécènes aristocratiques privés plutôt que pour l'État, ce qui lui a permis de produire les scènes de jardin ludiques et emblématiques pour lesquelles il est reconnu aujourd'hui.",
       work: 'Les Hasards Heureux de l\'Escarpolette (1767)',
-      img: 'https://artincontext.org/wp-content/uploads/2023/08/French-Art-Examples.avif', 
-      caption: 'The definitive symbol of 18th-century elite pleasure.',
+      img: 'https://artincontext.org/wp-content/uploads/2023/08/French-Art-Examples.avif',
+      caption: 'Le symbole définitif du plaisir de l\'élite du XVIIIe siècle.',
       color: '#0a0607'
     },
+    // CHANGED TO SPECIAL TYPE ONLY FOR PAGE 10 
     {
-      type: 'tech-detail',
+      type: 'tech-detail-special',
       title: 'TECHNIQUES DU ROCOCO',
       items: [
-        { t: 'Pastel Palette', d: 'Focus on pinks, baby blues, and creams to eliminate the weight of shadows.', img: '' },
-        { t: 'Feathery Brushwork', d: 'Light, wispy strokes designed to mimic the texture of silk and clouds.', img: '' },
-        { t: 'S-Curve Composition', d: 'Rejects straight lines for flowing, asymmetrical curves and shell-like shapes.', img: '' },
-        { t: 'Translucent Glazing', d: 'Applying sheer layers of paint to create a glowing, porcelain-like skin tone.', img: '' }
+        { t: 'Palette Pastel', d: 'Accent sur les roses, les bleus clairs et les crèmes pour éliminer la lourdeur des ombres.' },
+        { t: 'Coup de Pinceau Plumeux', d: 'Coups légers et vaporeux conçus pour imiter la texture de la soie et des nuages.' },
+        { t: 'Composition en Courbe S', d: 'Rejette les lignes droites au profit de courbes fluides, asymétriques et de formes en coquillage.' },
+        { t: 'Glaçis Translucide', d: 'Application de fines couches de peinture pour créer un teint de peau éclatant, semblable à de la porcelaine.' }
       ],
+      imgA: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg/3840px-L%27Embarquement_pour_Cyth%C3%A8re%2C_by_Antoine_Watteau%2C_from_C2RMF_retouched.jpg',
+      caption: 'Pèlerinage à Cythère (1717) – Antoine Watteau',
       color: '#1a1012'
     },
     // --- ERA II: ROMANTICISM ---
@@ -121,8 +126,8 @@ const App = () => {
       type: 'splash',
       era: 'II',
       title: 'LE FEU ROMANTIQUE',
-      dates: '1780s — 1850s',
-      intro: 'Art becomes a weapon. Passion, blood, and revolution take over the canvas.',
+      dates: 'Années 1780 — 1850',
+      intro: 'L\'art devient une arme. La passion, le sang et la révolution s\'emparent de la toile.',
       img: 'https://images.unsplash.com/photo-1505672678657-cc7037095e60?auto=format&fit=crop&q=80&w=1200',
       color: '#1a0505',
       accent: '#ef4444'
@@ -130,51 +135,54 @@ const App = () => {
     {
       type: 'flowchart',
       title: 'CHRONOLOGIE RÉVOLUTIONNAIRE',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Pierre-Antoine_Demachy_-_D%C3%A9molition_de_la_Bastille%2C_le_17_juillet_1789_-_P53_-_Mus%C3%A9e_Carnavalet.jpg/3840px-Pierre-Antoine_Demachy_-_D%C3%A9molition_de_la_Bastille%2C_le_17_juillet_1789_-_P53_-_Mus%C3%A9e_Carnavalet.jpg',
       steps: [
-        { year: '1789', t: 'Bastille', d: 'The fall of the monarchy shifts art toward heroic sacrifice.' },
-        { year: '1804', t: 'Empire', d: 'Napoleon uses art to document his global ambitions and glory.' },
-        { year: '1819', t: 'The Medusa', d: 'A shift from glory to the horror of government failure.' },
-        { year: '1830', t: 'Liberty', d: 'The common man finally takes center stage in history painting.' }
+        { year: '1789', t: 'Bastille', d: 'La chute de la monarchie oriente l\'art vers le sacrifice héroïque.' },
+        { year: '1804', t: 'Empire', d: 'Napoléon utilise l\'art pour documenter ses ambitions mondiales et sa gloire.' },
+        { year: '1819', t: 'La Méduse', d: 'Un passage de la gloire à l\'horreur de l\'échec gouvernemental.' },
+        { year: '1830', t: 'Liberté', d: 'L\'homme du commun occupe enfin le devant de la scène dans la peinture d\'histoire.' }
       ],
       color: '#1a0505'
     },
     {
       type: 'article',
       title: 'LE CRI DU SENTIMENT',
-      content: "Romanticism was a rejection of the cold logic of the Enlightenment. In France, it was fueled by the chaos of constant regime changes. Artists stopped painting the 'ideal' and started painting the 'intense'. Whether it was a shipwreck or a barricade, the goal was to make the viewer feel the adrenaline and the pain of the struggle for liberty.",
-      sub: 'Emotion Over Reason',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Eug%C3%A8ne_Delacroix_-_Les_baigneuses_%281854%29.jpg/1280px-Eug%C3%A8ne_Delacroix_-_Les_baigneuses_%281854%29.jpg?_=20180513233653', 
+      content: "Le Romantisme fut un rejet de la froide logique des Lumières. En France, il a été alimenté par le chaos des constants changements de régime. Les artistes ont cessé de peindre l''idéal' pour commencer à peindre l''intense'. Qu'il s'agisse d'un naufrage ou d'une barricade, le but était de faire ressentir au spectateur l'adrénaline et la douleur de la lutte pour la liberté.",
+      sub: 'L\'Émotion sur la Raison',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Eug%C3%A8ne_Delacroix_-_Les_baigneuses_%281854%29.jpg/1280px-Eug%C3%A8ne_Delacroix_-_Les_baigneuses_%281854%29.jpg?_=20180513233653',
       color: '#0f0202'
     },
     {
       type: 'spotlight',
       name: 'EUGÈNE DELACROIX',
       dates: '1798 — 1863',
-      bio: "The leader of the Romantic school. Delacroix was a colorist who believed that a painting's emotional power came from its vibration. He was deeply inspired by literature and his travels to Morocco, which introduced exoticism into his work. His brush was never calm; he used sweeping, violent movements to bring history to life, most famously during the July Revolution of 1830.",
+      bio: "Chef de file de l'école romantique, Delacroix était un coloriste qui croyait que le pouvoir émotionnel d'une peinture provenait de sa vibration. Il fut profondément inspiré par la littérature et ses voyages au Maroc, qui ont introduit l'exotisme dans son œuvre. Son pinceau n'était jamais calme; il utilisait de grands mouvements violents pour donner vie à l'histoire, le plus célèbre étant lors de la Révolution de Juillet 1830.",
       work: 'La Liberté guidant le peuple (1830)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/960px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg', 
-      caption: 'The ultimate personification of the French revolutionary soul.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg/960px-La_Libert%C3%A9_guidant_le_peuple_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_129_-_apr%C3%A8s_restauration_2024.jpg',
+      caption: 'La personnification ultime de l\'âme révolutionnaire française.',
       color: '#0a0202'
     },
     {
       type: 'spotlight',
       name: 'THÉODORE GÉRICAULT',
       dates: '1791 — 1824',
-      bio: "A short-lived but explosive genius. Géricault was a pioneer who studied real human corpses and survivors to paint 'The Raft of the Medusa'. He moved art away from the 'beautiful' and toward the 'sublime horror'. His work served as a direct political attack on the corruption of the restored French monarchy.",
+      bio: "Un génie éphémère mais explosif. Géricault fut un pionnier qui a étudié de vrais cadavres humains et des survivants pour peindre 'Le Radeau de la Méduse'. Il a éloigné l'art du 'beau' pour aller vers la 'sublime horreur'. Son œuvre a servi d'attaque politique directe contre la corruption de la monarchie française restaurée.",
       work: 'Le Radeau de la Méduse (1819)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/3840px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg', 
-      caption: 'A scene of despair transformed into a political megaphone.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg/3840px-JEAN_LOUIS_TH%C3%89ODORE_G%C3%89RICAULT_-_La_Balsa_de_la_Medusa_%28Museo_del_Louvre%2C_1818-19%29.jpg',
+      caption: 'Une scène de désespoir transformée en porte-voix politique.',
       color: '#050000'
     },
     {
-      type: 'tech-detail',
+      type: 'tech-detail-special',
       title: 'TECHNIQUES ROMANTIQUES',
       items: [
-        { t: 'Chiaroscuro', d: 'Dramatic use of deep shadows and blinding highlights to focus on the hero.', img: '' },
-        { t: 'Diagonal Lines', d: 'Arranging figures in a pyramid or diagonal to create unstable, kinetic energy.', img: '' },
-        { t: 'Vibrant Reds/Blues', d: 'Using saturated colors to signal blood, passion, and the national flag.', img: '' },
-        { t: 'Visible Texture', d: 'Thick application of paint (impasto) that shows the artist’s hand in motion.', img: '' }
+        { t: 'Clair-Obscur', d: 'Utilisation dramatique d\'ombres profondes et de reflets aveuglants pour se concentrer sur le héros.' },
+        { t: 'Lignes Diagonales', d: 'Agencement des figures en pyramide ou en diagonale pour créer une énergie cinétique instable.' },
+        { t: 'Rouges/Bleus Vibrants', d: 'Utilisation de couleurs saturées pour signaler le sang, la passion et le drapeau national.' },
+        { t: 'Texture Visible', d: 'Application épaisse de peinture (empâtement) qui montre la main de l\'artiste en mouvement.' }
       ],
+      imgA: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg/960px-La_Mort_de_Sardanapale_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_2346.jpg',
+      caption: 'La Mort de Sardanapale (1827) – Eugène Delacroix',
       color: '#1a0505'
     },
     // --- ERA III: REALISM ---
@@ -182,59 +190,65 @@ const App = () => {
       type: 'splash',
       era: 'III',
       title: 'LA VÉRITÉ DU PEUPLE',
-      dates: '1840s — 1880s',
-      intro: 'No more heroes, no more myths. Just the honest struggle of the working class.',
-      img: 'https://images.unsplash.com/photo-1518998053504-539cbf6c3fd2?auto=format&fit=crop&q=80&w=1200',
-      color: '#1a1410',
-      accent: '#92400e'
+      dates: 'Années 1840 — 1880',
+      intro: 'Plus de héros, plus de mythes. Seulement la lutte honnête de la classe ouvrière.',
+      img: 'https://www.escapemotions.com/images/mainpage/images/blog_posts_bg/landing-page_blog_93303117480.jpg',
+      color: 'rgb(91, 5, 43)',
+      accent: 'rgb(16, 17, 72)'
     },
     {
       type: 'flowchart',
       title: 'CHRONOLOGIE SOCIALE',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Barricade18March1871_%28cropped%29.jpg',
       steps: [
-        { year: '1848', t: '2nd Republic', d: 'Workers demand rights; the king is overthrown once more.' },
-        { year: '1855', t: 'Pavilion', d: 'Courbet holds his own exhibition, bypassing the elite Salon.' },
-        { year: '1870', t: 'War', d: 'The defeat against Prussia leads to the end of the Second Empire.' },
-        { year: '1871', t: 'The Commune', d: 'The most radical moment for workers in French history.' }
+        { year: '1848', t: '2ème République', d: 'Les ouvriers exigent des droits ; le roi est de nouveau renversé.' },
+        { year: '1855', t: 'Le Pavillon', d: 'Courbet organise sa propre exposition, contournant l\'élite du Salon.' },
+        { year: '1870', t: 'Guerre', d: 'La défaite contre la Prusse conduit à la fin du Second Empire.' },
+        { year: '1871', t: 'La Commune', d: 'Le moment le plus radical pour les ouvriers dans l\'histoire de France.' }
       ],
       color: '#1a1410'
     },
     {
       type: 'article',
       title: 'LE MIROIR SOCIAL',
-      content: "Realism was a democratic movement. Artists like Courbet and Millet turned their backs on the grand fantasies of Romanticism to paint the 'unbeautified' truth. They painted stone-breakers, funerals in small towns, and women working in fields. By giving these common subjects the same scale as kings, they were making a profound political statement about the equality of all Frenchmen.",
-      sub: 'Honesty Over Drama',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Telemaco_Signorini%2C_Il_ghetto_di_Firenze%2C_1882%2C_95x65_cm.jpg/960px-Telemaco_Signorini%2C_Il_ghetto_di_Firenze%2C_1882%2C_95x65_cm.jpg', 
+      content: "Le Réalisme fut un mouvement démocratique. Des artistes comme Courbet et Millet ont tourné le dos aux grandes fantaisies du Romantisme pour peindre la vérité 'sans embellissement'. Ils ont peint des casseurs de pierres, des enterrements dans de petites villes et des femmes travaillant dans les champs. En donnant à ces sujets communs la même échelle qu'aux rois, ils faisaient une déclaration politique profonde sur l'égalité de tous les Français.",
+      sub: 'L\'Honnêteté avant le Drame',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Telemaco_Signorini%2C_Il_ghetto_di_Firenze%2C_1882%2C_95x65_cm.jpg/960px-Telemaco_Signorini%2C_Il_ghetto_di_Firenze%2C_1882%2C_95x65_cm.jpg',
       color: '#120f0d'
     },
     {
       type: 'spotlight',
       name: 'GUSTAVE COURBET',
       dates: '1819 — 1877',
-      bio: "Courbet was a radical who famously said, 'Show me an angel and I will paint one.' He rejected all idealization. He was a self-taught master who learned by copying old masters in the Louvre, eventually becoming the most controversial figure in the French art world. He even participated in the Paris Commune, for which he was later exiled.",
+      bio: "Courbet était un radical qui a dit la célèbre phrase : 'Montrez-moi un ange et je le peindrai.' Il a rejeté toute idéalisation. C'était un maître autodidacte qui a appris en copiant les maîtres anciens au Louvre, devenant finalement la figure la plus controversée du monde de l'art français. Il a même participé à la Commune de Paris, ce qui lui a valu d'être exilé par la suite.",
       work: 'Un Enterrement à Ornans (1849)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/3840px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg', 
-      caption: 'Giving the dignity of a royal funeral to a simple village death.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg/3840px-Gustave_Courbet_-_A_Burial_at_Ornans_-_Google_Art_Project.jpg',
+      caption: 'Donner la dignité d\'un enterrement royal à une simple mort de village.',
       color: '#0f0c0a'
     },
     {
       type: 'spotlight',
       name: 'JEAN-FRANÇOIS MILLET',
       dates: '1814 — 1875',
-      bio: "Millet was the son of a peasant, and he brought a deeply personal respect for manual labor to the canvas. Unlike the urban Courbet, Millet focused on the spiritual and physical weight of rural life. His paintings often had a quiet, religious aura, elevating the act of farming into a sacred ritual of the French soul.",
+      bio: "Millet était fils de paysan, et il a apporté un respect profondément personnel pour le travail manuel sur la toile. Contrairement à l'urbain Courbet, Millet s'est concentré sur le poids spirituel et physique de la vie rurale. Ses peintures avaient souvent une aura calme et religieuse, élevant l'acte de cultiver la terre en un rituel sacré de l'âme française.",
       work: 'Les Glaneuses (1857)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg/1920px-Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg', 
-      caption: 'A quiet protest against social inequality through the dignity of work.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg/1920px-Jean-Fran%C3%A7ois_Millet_-_Gleaners_-_Google_Art_Project_2.jpg',
+      caption: 'Une protestation silencieuse contre l\'inégalité sociale par la dignité du travail.',
       color: '#0a0807'
     },
     {
       type: 'tech-detail',
       title: 'TECHNIQUES RÉALISTES',
+      layout: 'vertical-strip',
+      img2: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Les_Baigneuses-Courbet.jpg/960px-Les_Baigneuses-Courbet.jpg',
+      caption2: 'Les Baigneuses (1853) – Gustave Courbet',
+      img3: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Millet%2C_Jean-Fran%C3%A7ois_-_Man_with_a_Hoe_-_Google_Art_Project.jpg/960px-Millet%2C_Jean-Fran%C3%A7ois_-_Man_with_a_Hoe_-_Google_Art_Project.jpg',
+      caption3: 'L\'Homme à la houe (1860) – Jean-François Millet',
       items: [
-        { t: 'Earth Tones', d: 'Focus on browns, ochres, and greens to ground the subjects in the natural world.', img: '' },
-        { t: 'Heavy Forms', d: 'Figures are painted with weight and solidity, emphasizing their physical labor.', img: '' },
-        { t: 'Eye-Level Perspective', d: 'Placing the viewer in the same space as the subject, not looking down on them.', img: '' },
-        { t: 'Natural Light', d: 'Avoids dramatic spotlights for the flat, honest light of a cloudy day.', img: '' }
+        { t: 'Tons Terreux', d: 'Accent sur les bruns, les ocres et les verts pour ancrer les sujets dans le monde naturel.' },
+        { t: 'Formes Lourdes', d: 'Les figures sont peintes avec poids et solidité, soulignant leur labeur physique.' },
+        { t: 'Perspective à Hauteur d\'Yeux', d: 'Placer le spectateur dans le même espace que le sujet, sans le regarder de haut.' },
+        { t: 'Lumière Naturelle', d: 'Évite les projecteurs dramatiques au profit de la lumière plate et honnête d\'un jour nuageux.' }
       ],
       color: '#1a1410'
     },
@@ -243,8 +257,8 @@ const App = () => {
       type: 'splash',
       era: 'IV',
       title: 'LA MODERNITÉ',
-      dates: '1860s — 1970s',
-      intro: 'From the light of the harbor to the geometry of the mind. The birth of the avant-garde.',
+      dates: 'Années 1860 — 1970',
+      intro: 'De la lumière du port à la géométrie de l\'esprit. La naissance de l\'avant-garde.',
       img: 'https://images.unsplash.com/photo-1541119638723-c51cbe2262aa?auto=format&fit=crop&q=80&w=1200',
       color: '#0a1a1a',
       accent: '#10b981'
@@ -252,89 +266,93 @@ const App = () => {
     {
       type: 'flowchart',
       title: 'L\'ÉVOLUTION MODERNE',
+      img: 'https://www.thisiscolossal.com/wp-content/uploads/2026/02/carrington-4.jpg',
       steps: [
-        { year: '1872', t: 'Impression', d: 'Monet shows a harbor at dawn; the movement gets its name.' },
-        { year: '1905', t: 'Wild Beasts', d: 'Matisse uses pure color to shock the senses (Fauvism).' },
-        { year: '1907', t: 'Cubism', d: 'Picasso and Braque shatter the perspective into geometric planes.' },
-        { year: '1924', t: 'Surrealism', d: 'Paris becomes the world capital for dreams and the subconscious.' }
+        { year: '1872', t: 'Impression', d: 'Monet peint un port à l\'aube ; le mouvement trouve son nom.' },
+        { year: '1905', t: 'Fauves', d: 'Matisse utilise des couleurs pures pour choquer les sens (Fauvisme).' },
+        { year: '1907', t: 'Cubisme', d: 'Picasso et Braque brisent la perspective en plans géométriques.' },
+        { year: '1924', t: 'Surréalisme', d: 'Paris devient la capitale mondiale des rêves et de l\'inconscient.' }
       ],
-      color: '#0a1a1a'
+      color: '#04142e'
     },
     {
       type: 'article',
       title: 'LA CITÉ RAPIDE',
-      content: "As Paris industrialized, art had to move at the speed of the city. Impressionists like Monet caught the transient light of steam engines and cafes. Modernism wasn't just about what was painted, but the freedom to paint it. It was the ultimate revolution—where the artist finally gained total autonomy from the state and the academy.",
-      sub: 'Freedom and Form',
-      img: '', 
+      content: "Alors que Paris s'industrialisait, l'art devait avancer à la vitesse de la ville. Des impressionnistes comme Monet ont capté la lumière éphémère des machines à vapeur et des cafés. Le Modernisme ne concernait pas seulement ce qui était peint, mais la liberté de le peindre. Ce fut l'ultime révolution : l'artiste gagnant enfin une autonomie totale face à l'État et à l'académie.",
+      sub: 'Liberté et Forme',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Alfred_Sisley_-_Snow_at_Louveciennes_-_Google_Art_Project.jpg/1280px-Alfred_Sisley_-_Snow_at_Louveciennes_-_Google_Art_Project.jpg?_=20130105031253',
       color: '#051111'
     },
     {
       type: 'spotlight',
       name: 'CLAUDE MONET',
       dates: '1840 — 1926',
-      bio: "Monet was the master of atmosphere. He spent his life chasing light across haystacks, cathedrals, and water lilies. He rejected the traditional 'finish' of a painting, preferring to show the 'impression' of a fleeting second. His garden at Giverny became a laboratory for color that would eventually influence the move toward total abstraction.",
+      bio: "Monet était le maître de l'atmosphère. Il a passé sa vie à poursuivre la lumière sur des meules de foin, des cathédrales et des nénuphars. Il a rejeté le 'fini' traditionnel d'une peinture, préférant montrer l''impression' d'une seconde éphémère. Son jardin à Giverny est devenu un laboratoire de la couleur qui influencera plus tard le mouvement vers l'abstraction totale.",
       work: 'Impression, soleil levant (1872)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/960px-Monet_-_Impression%2C_Sunrise.jpg', 
-      caption: 'The dawn of a new way of seeing the world.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Monet_-_Impression%2C_Sunrise.jpg/960px-Monet_-_Impression%2C_Sunrise.jpg',
+      caption: 'L\'aube d\'une nouvelle façon de voir le monde.',
       color: '#020d0d'
     },
     {
       type: 'spotlight',
       name: 'HENRI MATISSE',
       dates: '1869 — 1954',
-      bio: "Matisse was the king of the Fauves (the Wild Beasts). For him, color was not a tool for description, but for expression. He simplified human forms into elegant, powerful lines and bold, flat areas of pure pigment. He remained a revolutionary throughout his life, even inventing 'drawing with scissors' in his final years.",
+      bio: "Matisse était le roi des Fauves. Pour lui, la couleur n'était pas un outil de description, mais d'expression. Il a simplifié les formes humaines en lignes élégantes et puissantes et en aplats audacieux de pigments purs. Il est resté un révolutionnaire toute sa vie, inventant même le 'dessin avec des ciseaux' dans ses dernières années.",
       work: 'La Danse (1910)',
-      img: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Matissedance.jpg', 
-      caption: 'The rhythmic energy of pure human joy.',
+      img: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/Matissedance.jpg',
+      caption: 'L\'énergie rythmique de la joie humaine pure.',
       color: '#000000'
     },
     {
-      type: 'tech-detail',
+      type: 'tech-detail-special',
       title: 'TECHNIQUES MODERNES',
+      layout: 'split',
+      imgA: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/%27White_Water_Lilies%27_by_Claude_Monet%2C_1899%2C_Pushkin_Museum.JPG/500px-%27White_Water_Lilies%27_by_Claude_Monet%2C_1899%2C_Pushkin_Museum.JPG',
+      caption: 'Série des Nymphéas (1896–1926) – Claude Monet',
       items: [
-        { t: 'Broken Color', d: 'Dabs of pure paint side-by-side that the eye mixes from a distance.', img: '' },
-        { t: 'En Plein Air', d: 'Painting directly outside to capture real light and weather effects.', img: '' },
-        { t: 'Flat Pigment', d: 'Removing shadows to emphasize the two-dimensional power of the canvas.', img: '' },
-        { t: 'Geometric Planes', d: 'Breaking subjects into cubes and triangles to show multiple angles at once.', img: '' }
+        { t: 'Couleur Brisée', d: 'Petites touches de peinture pure côte à côte que l\'œil mélange de loin.' },
+        { t: 'En Plein Air', d: 'Peindre directement à l\'extérieur pour capturer la vraie lumière et la météo.' },
+        { t: 'Pigment Plat', d: 'Supprimer les ombres pour souligner la puissance bidimensionnelle de la toile.' },
+        { t: 'Plans Géométriques', d: 'Briser les sujets en cubes et en triangles pour montrer plusieurs angles à la fois.' }
       ],
       color: '#0a1a1a'
     },
     // --- FINAL ---
-    {
-      type: 'lexique',
-      title: 'LEXIQUE D\'HONNEUR',
-      references: [
-        { term: 'Rococo', context: 'The ornate final act of the monarchy (1730s).' },
-        { term: 'Romantisme', context: 'The emotional cry of the 1830 revolutionary generation.' },
-        { term: 'Réalisme', context: 'The democratic truth-speaking of the working man (1848).' },
-        { term: 'Impressionnisme', context: 'The modern celebration of light and speed (1870s).' },
-        { term: 'École de Fontainebleau', context: 'The Italian-influenced start of the French Renaissance.' }
-      ],
-      color: '#050505'
-    },
+
     {
       type: 'manifesto',
       title: 'L\'ÉPILOGUE',
-      text: "France is a country built on the barricades. Its art is no different. From the palaces of Versailles to the streets of Paris, every painting here is a witness to the history of a people who refuse to be silent.",
+      text: "La France est un pays bâti sur les barricades. Son art n'est pas différent. Des palais de Versailles aux rues de Paris, chaque peinture ici est le témoin de l'histoire d'un peuple qui refuse de se taire.",
       quote: '“L\'art français a transformé la peinture en un mégaphone pour la liberté.”',
       color: '#0a0a0a'
     },
     {
       type: 'tech',
       title: 'RÉFÉRENCES',
-      items: [
-        'Wikipedia (French Art History)',
-        'The Met Museum (School of Fontainebleau)',
-        'Artsy (The Realist Revolt)',
-        'The Art Story (Romanticism)'
+      col1Title: 'Sources Iconographiques',
+      col1: [
+        'The Met Museum (metmuseum.org)',
+        'Musée du Louvre (collections.louvre.fr)',
+        'Musée d’Orsay (musee-orsay.fr)',
+        'National Gallery UK (nationalgallery.org.uk)',
+        'Google Arts & Culture (artsandculture.google.com)',
+        'Wikimedia Commons (commons.wikimedia.org)'
       ],
-      color: '#b69797'
+      col2Title: 'Sources Historiques',
+      col2: [
+        'Smarthistory (smarthistory.org)',
+        'Heilbrunn Timeline (metmuseum.org/toah)',
+        'Musée d’Orsay Archives (musee-orsay.fr)',
+        'Encyclopaedia Britannica (britannica.com)',
+        'Tate Museum (tate.org.uk/art)'
+      ],
+      color: '#000000'
     },
     {
       type: 'cover',
       title: 'FIN',
       sub: 'L\'HÉRITAGE DE LA TOILE',
-      detail: 'Monumental Edition MMXXIV',
+      detail: 'Édition Monumentale MMXXIV',
       img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&q=80&w=1200',
       color: '#000'
     }
@@ -362,12 +380,11 @@ const App = () => {
           <Flag size={18} className="text-white/20" />
           <span className="text-2xl tracking-[0.4em] text-white font-bold opacity-80 uppercase">ÉCLAT</span>
         </div>
-        <span className="text-[10px] text-white/30 uppercase tracking-[0.5em] font-sans">Art as Revolution</span>
       </nav>
 
       <main className="relative w-full h-screen flex items-center justify-center p-0">
         <div className={`w-full h-full relative transition-all duration-1000 transform ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}>
-          
+
           {/* COVER TYPE */}
           {page.type === 'cover' && (
             <div className="w-full h-full flex flex-col items-center justify-center text-center relative px-10">
@@ -379,53 +396,238 @@ const App = () => {
             </div>
           )}
 
-          {/* RENAISSANCE TYPE (NEW) */}
+          {/* RENAISSANCE TYPE */}
           {page.type === 'renaissance' && (
             <div className="w-full h-full p-24 grid grid-cols-12 gap-8 relative">
-              <div className="col-span-3 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase">
-                {page.img1 ? <img src={page.img1} /> : '[AJOUTER IMAGE COIN GAUCHE]'}
+              <div className="col-span-4 flex flex-col shadow-2xl relative">
+                {/* Image Container */}
+                <div className="flex-1 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase">
+                  {page.img1 ? <img src={page.img1} alt="Left Corner" className="w-full h-full object-cover" /> : '[AJOUTER IMAGE COIN GAUCHE]'}
+                </div>
+                {/* Caption Block */}
+                <div className="bg-black p-6 flex items-center z-20">
+                  <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                    Diane chasseresse, école de Fontainebleau (1550-1560)
+                  </p>
+                </div>
               </div>
-              <div className="col-span-6 flex flex-col justify-center space-y-8 text-center px-10">
-                <h2 className="text-6xl font-black text-white tracking-tighter leading-none">{page.title}</h2>
+              <div className="col-span-4 flex flex-col justify-center space-y-6 text-center px-8">
+                <h2 className="text-5xl font-black text-white tracking-tighter leading-tight">{page.title}</h2>
                 <p className="text-white/40 uppercase tracking-[0.3em] font-sans text-xs italic">{page.sub}</p>
-                <p className="text-white/70 text-lg leading-relaxed font-light">{page.content}</p>
+                <p className="text-white/70 text-base leading-relaxed font-light">{page.content}</p>
               </div>
-              <div className="col-span-3 col-start-10 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase mt-auto h-1/2">
-                {page.img2 ? <img src={page.img2} /> : '[AJOUTER IMAGE COIN DROIT]'}
+              <div className="col-span-4 flex flex-col gap-6">
+                {/* First Image Box with Caption */}
+                <div className="flex-1 flex flex-col shadow-2xl relative">
+                  <div className="flex-1 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase">
+                    {page.img2 ? <img src={page.img2} alt="Right Corner" className="w-full h-full object-cover" /> : '[AJOUTER IMAGE COIN DROIT]'}
+                  </div>
+                  <div className="bg-black p-6 flex items-center z-20">
+                    <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                      Ève, Première Pandore par Jean Cousin l'Ancien (vers 1550)
+                    </p>
+                  </div>
+                </div>
+                {/* Second Image Box */}
+                <div className="flex-1 flex flex-col shadow-2xl relative">
+                  <div className="flex-1 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase">
+                    {page.img3 ? <img src={page.img3} alt="Second Image" className="w-full h-full object-cover" /> : '[AJOUTER IMAGE SECOND]'}
+                  </div>
+                  <div className="bg-black p-6 flex items-center z-20">
+                    <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                      Ligier Richier, Lamentation du Christ, église Saint-Étienne, Saint-Mihiel
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           )}
 
-          {/* TECH DETAIL TYPE (NEW) */}
-          {page.type === 'tech-detail' && (
-            <div className="w-full h-full p-24 flex flex-col justify-center">
-               <h3 className="text-white/30 uppercase tracking-[1em] mb-16 text-sm font-bold text-center">{page.title}</h3>
-               <div className="grid grid-cols-2 gap-x-20 gap-y-16">
-                 {page.items.map((it, i) => (
-                   <div key={i} className="flex items-center gap-8 group">
-                     <div className="w-24 h-24 border border-white/10 bg-white/5 flex-shrink-0 flex items-center justify-center text-[8px] text-white/20 uppercase tracking-tighter text-center px-2">
-                       {it.img ? <img src={it.img} /> : '[VISUEL TECHNIQUE]'}
-                     </div>
-                     <div>
-                       <h4 className="text-white text-2xl font-bold uppercase tracking-widest mb-2 group-hover:text-[#ed2939] transition-colors">{it.t}</h4>
-                       <p className="text-white/50 text-sm leading-snug font-light">{it.d}</p>
-                     </div>
-                   </div>
-                 ))}
-               </div>
+          {/* =======================================================
+              SPECIAL TECH DETAIL TYPE (ROCOCO & ROMANTICISM)
+              ======================================================= */}
+          {page.type === 'tech-detail-special' && (
+            <div className="w-full h-full relative flex items-center justify-center p-24 overflow-hidden z-0">
+
+              <div className="w-full h-full grid grid-cols-12 gap-16 relative z-10 items-center">
+
+                {/* Left Column: Technique List */}
+                <div className="col-span-5 flex flex-col justify-center space-y-12">
+                  <h2 className="text-6xl font-black text-white tracking-tighter uppercase border-b border-white border-opacity-20 pb-6">
+                    {page.title}
+                  </h2>
+                  <div className="space-y-10">
+                    {page.items.map((it, i) => (
+                      <div key={i} className="flex gap-6 group">
+                        <div className="flex flex-col items-center mt-1.5">
+                          {/* Circular detail zoom marker */}
+                          <div className="w-4 h-4 rounded-full border-2 border-[#ed2939] group-hover:bg-[#ed2939] transition-all duration-300 shadow-[0_0_10px_rgba(237,41,57,0)] group-hover:shadow-[0_0_15px_rgba(237,41,57,0.8)]" />
+                        </div>
+                        <div>
+                          <h4 className="text-[#ed2939] text-xl font-black uppercase tracking-tighter mb-2 leading-none">{it.t}</h4>
+                          <p className="text-white opacity-60 text-sm leading-relaxed uppercase font-sans tracking-wide">{it.d}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right Column: 1 Hero Image + Black Caption Box */}
+                <div className="col-span-7 h-[85%] flex flex-col shadow-2xl relative">
+
+                  {/* Hero Image */}
+                  <div className="flex-1 bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center italic text-white/20 uppercase text-sm tracking-[0.5em] relative group">
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity z-10" />
+                    {page.imgA ? (
+                      <img src={page.imgA} alt="Hero" className="absolute inset-0 w-full h-full object-cover" />
+                    ) : (
+                      '[AJOUTER IMAGE ICÔNE ICI]'
+                    )}
+                  </div>
+
+                  {/* Black Caption Block */}
+                  <div className="bg-black p-8 min-h-[100px] flex items-center z-20">
+                    <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                      {page.caption || 'Description de l\'image'}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          )}
+
+          {/* ORIGINAL TECH DETAIL TYPE (Kept exactly as it was for other pages) */}
+          {page.type === 'tech-detail' && page.img && (
+            <div className="w-full h-full p-16 flex flex-col relative">
+              {/* Title - Top Left */}
+              <h3 className="text-white/40 uppercase tracking-[1em] text-lg font-bold mb-8 absolute top-8 left-8">{page.title}</h3>
+
+              {/* Main Layout - Center image with techniques around */}
+              <div className="flex-1 flex flex-col items-center justify-center relative">
+                {/* Top Technique */}
+                {page.items[0] && (
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full mb-8 text-center group">
+                    <h4 className="text-white text-lg font-bold uppercase tracking-widest mb-2 group-hover:text-[#ed2939] transition-colors">{page.items[0].t}</h4>
+                    <p className="text-white/50 text-xs leading-snug font-light max-w-[180px]">{page.items[0].d}</p>
+                  </div>
+                )}
+
+                {/* Left and Right Techniques - Horizontal Layout */}
+                <div className="flex w-full items-center justify-between gap-12 mb-12">
+                  {/* Left Technique */}
+                  {page.items[3] && (
+                    <div className="flex-1 text-left group">
+                      <h4 className="text-white text-lg font-bold uppercase tracking-widest mb-2 group-hover:text-[#ed2939] transition-colors">{page.items[3].t}</h4>
+                      <p className="text-white/50 text-xs leading-snug font-light">{page.items[3].d}</p>
+                    </div>
+                  )}
+
+                  {/* Center Image with Caption */}
+                  <div className="flex-1 flex flex-col shadow-2xl relative max-w-md">
+                    {/* Image Box */}
+                    <div className="h-80 bg-white/5 border border-white/10 overflow-hidden flex items-center justify-center">
+                      <div className="absolute inset-0 bg-center bg-cover opacity-60" style={{ backgroundImage: `url(${page.img})` }} />
+                    </div>
+                    {/* Caption Box */}
+                    <div className="bg-black p-6 flex items-center z-20">
+                      <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                        Description de l'image
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Right Technique */}
+                  {page.items[1] && (
+                    <div className="flex-1 text-right group">
+                      <h4 className="text-white text-lg font-bold uppercase tracking-widest mb-2 group-hover:text-[#ed2939] transition-colors">{page.items[1].t}</h4>
+                      <p className="text-white/50 text-xs leading-snug font-light">{page.items[1].d}</p>
+                    </div>
+                  )}
+                </div>
+
+                {/* Bottom Technique */}
+                {page.items[2] && (
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full mt-8 text-center group">
+                    <h4 className="text-white text-lg font-bold uppercase tracking-widest mb-2 group-hover:text-[#ed2939] transition-colors">{page.items[2].t}</h4>
+                    <p className="text-white/50 text-xs leading-snug font-light max-w-[180px]">{page.items[2].d}</p>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
+          {/* Original Tech Detail - Without Image */}
+          {page.type === 'tech-detail' && !page.img && !page.img2 && (
+            <div className="w-full h-full p-24 flex flex-col items-center justify-center space-y-16">
+              <h3 className="text-white/40 uppercase tracking-[1em] mb-8 text-sm font-bold text-center">{page.title}</h3>
+              <div className="grid grid-cols-2 gap-16 max-w-5xl">
+                {page.items.map((it, i) => (
+                  <div key={i} className="group">
+                    <h4 className="text-white text-xl font-bold uppercase tracking-widest mb-4 group-hover:text-[#ed2939] transition-colors">{it.t}</h4>
+                    <p className="text-white/50 text-sm leading-relaxed font-light">{it.d}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Tech Detail - Split Two Images */}
+          {page.type === 'tech-detail' && !page.img && page.img2 && (
+            <div className="w-full h-full p-20 flex flex-col items-center justify-center">
+              <h3 className="text-white/40 uppercase tracking-[1em] mb-12 text-sm font-bold text-center">{page.title}</h3>
+              
+              <div className="flex w-full max-w-6xl gap-8 mb-16 h-[45%]">
+                {/* First Image Box */}
+                <div className="flex-1 flex flex-col shadow-2xl relative">
+                  <div className="flex-1 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase relative group">
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity z-10" />
+                    {page.img2 ? <img src={page.img2} alt="Image 1" className="w-full h-full object-cover" /> : '[AJOUTER IMAGE 1]'}
+                  </div>
+                  <div className="bg-black p-6 flex items-center z-20">
+                     <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                        {page.caption2 || 'Description 1'}
+                     </p>
+                  </div>
+                </div>
+
+                {/* Second Image Box */}
+                <div className="flex-1 flex flex-col shadow-2xl relative">
+                  <div className="flex-1 border border-white/10 bg-white/5 overflow-hidden flex items-center justify-center italic text-white/20 text-xs tracking-widest uppercase relative group">
+                    <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity z-10" />
+                    {page.img3 ? <img src={page.img3} alt="Image 2" className="w-full h-full object-cover" /> : '[AJOUTER IMAGE 2]'}
+                  </div>
+                  <div className="bg-black p-6 flex items-center z-20">
+                     <p className="text-xs text-white opacity-80 uppercase tracking-widest leading-relaxed font-sans font-bold">
+                        {page.caption3 || 'Description 2'}
+                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Text Below */}
+              <div className="grid grid-cols-4 gap-8 w-full max-w-6xl">
+                  {page.items.map((it, i) => (
+                    <div key={i} className="group flex flex-col">
+                      <h4 className="text-white text-lg font-bold uppercase tracking-widest mb-4 group-hover:text-[#ed2939] transition-colors">{it.t}</h4>
+                      <p className="text-white/50 text-sm leading-relaxed font-light">{it.d}</p>
+                    </div>
+                  ))}
+              </div>
             </div>
           )}
 
           {/* SPLASH TYPE */}
           {page.type === 'splash' && (
             <div className="w-full h-full flex items-center justify-center relative overflow-hidden">
-               <div className="absolute inset-0 bg-center bg-cover opacity-20 scale-110" style={{ backgroundImage: `url(${page.img})` }} />
-               <div className="relative text-center max-w-5xl px-10">
-                 <span className="text-xl font-bold tracking-[1em] mb-6 block" style={{ color: page.accent }}>{page.era}</span>
-                 <h2 className="text-[12vw] font-black text-white tracking-tighter mb-4 leading-none uppercase">{page.title}</h2>
-                 <p className="text-2xl tracking-[0.5em] text-white/40 mb-12 uppercase">{page.dates}</p>
-                 <p className="text-3xl text-white/90 leading-tight italic max-w-4xl mx-auto font-light">"{page.intro}"</p>
-               </div>
+              <div className="absolute inset-0 bg-center bg-cover opacity-20 scale-110" style={{ backgroundImage: `url(${page.img})` }} />
+              <div className="relative text-center max-w-5xl px-10">
+                <span className="text-xl font-bold tracking-[1em] mb-6 block" style={{ color: page.accent }}>{page.era}</span>
+                <h2 className="text-[12vw] font-black text-white tracking-tighter mb-4 leading-none uppercase">{page.title}</h2>
+                <p className="text-2xl tracking-[0.5em] text-white/40 mb-12 uppercase">{page.dates}</p>
+                <p className="text-3xl text-white/90 leading-tight italic max-w-4xl mx-auto font-light">"{page.intro}"</p>
+              </div>
             </div>
           )}
 
@@ -437,82 +639,83 @@ const App = () => {
                 {!page.img && <div className="z-10 p-8 border-2 border-white/10 text-xs text-white/30 tracking-[0.5em] uppercase">[AJOUTER ŒUVRE ICI]</div>}
               </div>
               <div className="w-full md:w-2/5 p-20 flex flex-col justify-center bg-black">
-                 <h2 className="text-7xl font-black text-white leading-tight mb-6 tracking-tighter uppercase">{page.name}</h2>
-                 <p className="text-white/40 text-lg italic mb-10">{page.dates}</p>
-                 <p className="text-white/60 text-lg leading-relaxed font-light mb-10">{page.bio}</p>
-                 <div className="p-8 border-l-4 border-white/20 bg-white/5">
-                    <p className="text-[10px] text-white/30 uppercase tracking-[0.5em] mb-4 font-sans">Œuvre Maîtresse</p>
-                    <p className="text-white font-bold text-2xl italic leading-none">{page.work}</p>
-                    <p className="text-white/40 text-xs uppercase mt-4 leading-relaxed font-sans italic">{page.caption}</p>
-                 </div>
+                <h2 className="text-7xl font-black text-white leading-tight mb-6 tracking-tighter uppercase">{page.name}</h2>
+                <p className="text-white/40 text-lg italic mb-10">{page.dates}</p>
+                <p className="text-white/60 text-lg leading-relaxed font-light mb-10">{page.bio}</p>
+                <div className="p-8 border-l-4 border-white/20 bg-white/5">
+                  <p className="text-[10px] text-white/30 uppercase tracking-[0.5em] mb-4 font-sans">Œuvre Maîtresse</p>
+                  <p className="text-white font-bold text-2xl italic leading-none">{page.work}</p>
+                  <p className="text-white/40 text-xs uppercase mt-4 leading-relaxed font-sans italic">{page.caption}</p>
+                </div>
               </div>
             </div>
           )}
 
           {/* ARTICLE TYPE */}
           {page.type === 'article' && (
-             <div className="w-full h-full flex flex-col md:flex-row">
-                <div className="flex-1 p-24 flex flex-col justify-center space-y-10">
-                   <h2 className="text-8xl font-black text-white leading-[0.8] tracking-tighter uppercase">{page.title}</h2>
-                   <h4 className="text-white/40 uppercase tracking-[0.5em] text-xl font-light">{page.sub}</h4>
-                   <p className="text-white/70 text-2xl leading-relaxed font-light first-letter:text-8xl first-letter:float-left first-letter:mr-6 first-letter:text-[#ed2939] first-letter:font-black">
-                     {page.content}
-                   </p>
-                </div>
-                <div className="flex-1 bg-white/5 flex items-center justify-center relative overflow-hidden">
-                   <div className="absolute inset-0 bg-center bg-cover opacity-40" style={{ backgroundImage: `url(${page.img})` }} />
-                   {!page.img && <div className="z-10 p-8 border-2 border-white/10 text-xs text-white/30 tracking-[0.5em] uppercase">[AJOUTER VISUEL HISTORIQUE]</div>}
-                </div>
-             </div>
+            <div className="w-full h-full flex flex-col md:flex-row">
+              <div className="flex-1 p-24 flex flex-col justify-center space-y-10">
+                <h2 className="text-8xl font-black text-white leading-[0.8] tracking-tighter uppercase">{page.title}</h2>
+                <h4 className="text-white/40 uppercase tracking-[0.5em] text-xl font-light">{page.sub}</h4>
+                <p className="text-white/70 text-2xl leading-relaxed font-light first-letter:text-8xl first-letter:float-left first-letter:mr-6 first-letter:text-[#ed2939] first-letter:font-black">
+                  {page.content}
+                </p>
+              </div>
+              <div className="flex-1 bg-white/5 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-center bg-cover opacity-40" style={{ backgroundImage: `url(${page.img})` }} />
+                {!page.img && <div className="z-10 p-8 border-2 border-white/10 text-xs text-white/30 tracking-[0.5em] uppercase">[AJOUTER VISUEL HISTORIQUE]</div>}
+              </div>
+            </div>
           )}
 
           {/* LEXIQUE TYPE */}
           {page.type === 'lexique' && (
             <div className="w-full h-full flex items-center justify-center p-24">
-               <div className="w-full max-w-6xl">
-                 <h2 className="text-9xl font-black text-white tracking-tighter mb-20 opacity-20 leading-none">{page.title}</h2>
-                 <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
-                    {page.references.map((ref, i) => (
-                      <div key={i} className="group border-b border-white/10 pb-8 hover:border-[#ed2939] transition-colors">
-                        <h4 className="text-white text-3xl font-bold uppercase tracking-widest mb-4">{ref.term}</h4>
-                        <p className="text-white/50 text-lg leading-snug font-light">{ref.context}</p>
-                      </div>
-                    ))}
-                 </div>
-               </div>
+              <div className="w-full max-w-6xl">
+                <h2 className="text-9xl font-black text-white tracking-tighter mb-20 opacity-20 leading-none">{page.title}</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+                  {page.references.map((ref, i) => (
+                    <div key={i} className="group border-b border-white/10 pb-8 hover:border-[#ed2939] transition-colors">
+                      <h4 className="text-white text-3xl font-bold uppercase tracking-widest mb-4">{ref.term}</h4>
+                      <p className="text-white/50 text-lg leading-snug font-light">{ref.context}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           )}
 
           {/* TABLE TYPE */}
           {page.type === 'table' && (
             <div className="w-full h-full flex flex-col items-center justify-center p-24">
-               <h2 className="text-6xl font-black text-white tracking-tighter mb-16 self-start uppercase">{page.title}</h2>
-               <div className="w-full border-t border-white/20">
-                  {page.data.map((row, i) => (
-                    <div key={i} className="grid grid-cols-3 py-12 border-b border-white/10 group cursor-pointer hover:bg-white/5 transition-all px-6">
-                      <div className="text-white text-5xl font-black tracking-tighter uppercase group-hover:translate-x-4 transition-transform">{row.era}</div>
-                      <div className="text-white/60 text-lg uppercase tracking-widest self-center font-sans px-10">{row.focus}</div>
-                      <div className="text-white/30 text-lg italic self-center text-right">{row.mood}</div>
-                    </div>
-                  ))}
-               </div>
+              <h2 className="text-6xl font-black text-white tracking-tighter mb-16 self-start uppercase">{page.title}</h2>
+              <div className="w-full border-t border-white/20">
+                {page.data.map((row, i) => (
+                  <div key={i} className="grid grid-cols-3 py-12 border-b border-white/10 group cursor-pointer hover:bg-white/5 transition-all px-6">
+                    <div className="text-white text-5xl font-black tracking-tighter uppercase group-hover:translate-x-4 transition-transform">{row.era}</div>
+                    <div className="text-white/60 text-lg uppercase tracking-widest self-center font-sans px-10">{row.focus}</div>
+                    <div className="text-white/30 text-lg italic self-center text-right">{row.mood}</div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
           {/* FLOWCHART TYPE */}
           {page.type === 'flowchart' && (
-            <div className="w-full h-full flex flex-col items-center justify-center p-24">
-               <h3 className="text-white/30 uppercase tracking-[1em] mb-20 text-sm font-bold">{page.title}</h3>
-               <div className="flex w-full items-start gap-0">
-                 {page.steps.map((s, i) => (
-                   <div key={i} className="flex-1 flex flex-col items-start px-8 group relative">
-                     <span className="text-white text-6xl font-black mb-6 opacity-20 group-hover:opacity-100 transition-opacity leading-none">{s.year}</span>
-                     <div className="h-1 w-full bg-white/10 mb-8 overflow-hidden"><div className="h-full bg-white w-0 group-hover:w-full transition-all duration-1000" /></div>
-                     <h4 className="text-white text-xl font-bold uppercase tracking-widest mb-4">{s.t}</h4>
-                     <p className="text-sm text-white/40 leading-relaxed uppercase">{s.d}</p>
-                   </div>
-                 ))}
-               </div>
+            <div className="w-full h-full flex flex-col items-center justify-center p-24 relative overflow-hidden">
+              {page.img && <div className="absolute inset-0 bg-center bg-cover opacity-20 scale-110 z-0" style={{ backgroundImage: `url(${page.img})` }} />}
+              <h3 className="relative z-10 text-white/50 uppercase tracking-[1em] mb-20 text-sm font-bold drop-shadow-md">{page.title}</h3>
+              <div className="relative z-10 flex w-full items-start gap-0 drop-shadow-lg">
+                {page.steps.map((s, i) => (
+                  <div key={i} className="flex-1 flex flex-col items-start px-8 group relative">
+                    <span className="text-white text-6xl font-black mb-6 opacity-20 group-hover:opacity-100 transition-opacity leading-none">{s.year}</span>
+                    <div className="h-1 w-full bg-white/10 mb-8 overflow-hidden"><div className="h-full bg-white w-0 group-hover:w-full transition-all duration-1000" /></div>
+                    <h4 className="text-white text-xl font-bold uppercase tracking-widest mb-4">{s.t}</h4>
+                    <p className="text-sm text-white/40 leading-relaxed uppercase">{s.d}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
@@ -526,21 +729,53 @@ const App = () => {
             </div>
           )}
 
+          {/* TECH TYPE */}
+          {page.type === 'tech' && (
+            <div className="w-full h-full flex flex-col items-center justify-start p-24 pt-32 text-left relative">
+              <h2 className="text-7xl font-black text-white tracking-tighter mb-24 uppercase text-center w-full opacity-40">{page.title}</h2>
+              
+              {page.col1 ? (
+                <div className="w-full max-w-7xl flex gap-32 mt-4">
+                  <div className="flex-1">
+                    <h3 className="text-white text-2xl font-bold mb-10 uppercase tracking-widest">{page.col1Title}</h3>
+                    <div className="space-y-6">
+                      {page.col1.map((item, i) => (
+                        <p key={i} className="text-white/60 text-lg font-light uppercase tracking-widest leading-relaxed">{item}</p>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-white text-2xl font-bold mb-10 uppercase tracking-widest">{page.col2Title}</h3>
+                    <div className="space-y-6">
+                      {page.col2.map((item, i) => (
+                        <p key={i} className="text-white/60 text-lg font-light uppercase tracking-widest leading-relaxed">{item}</p>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="space-y-6 text-center w-full">
+                  {page.items && page.items.map((item, i) => (
+                    <p key={i} className="text-white/60 text-2xl font-light uppercase tracking-widest">{item}</p>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
         </div>
       </main>
 
       {/* Footer Scrubber */}
       <footer className="fixed bottom-0 w-full p-16 flex justify-between items-center z-[110] bg-gradient-to-t from-black/80 to-transparent">
         <div className="flex gap-1 overflow-hidden">
-           {initialData.map((_, i) => (
-             <button key={i} onClick={() => setCurrentPage(i)} className={`h-1 transition-all duration-300 ${currentPage === i ? 'w-16 bg-white shadow-[0_0_15px_white]' : 'w-1 bg-white/10'}`} />
-           ))}
+          {initialData.map((_, i) => (
+            <button key={i} onClick={() => setCurrentPage(i)} className={`h-1.5 transition-all duration-300 ${currentPage === i ? 'w-16 bg-white shadow-[0_0_15px_white]' : 'w-1 bg-white/10'}`} />
+          ))}
         </div>
         <div className="text-right flex flex-col items-end">
-          <p className="text-[10px] tracking-[0.6em] text-white/20 uppercase mb-2 font-sans">Folio d'Art Française</p>
           <div className="flex items-center gap-6">
-            <span className="text-white/40 text-sm font-light font-sans tracking-[0.3em]">PAGE {currentPage + 1} / {initialData.length}</span>
-            <p className="text-6xl font-black text-white tracking-tighter leading-none">{currentPage + 1 < 10 ? `0${currentPage + 1}` : currentPage + 1}</p>
+            <p className="text-5xl font-black text-white/25 tracking-tighter leading-none">{currentPage + 1 < 10 ? `0${currentPage + 1}` : currentPage + 1}</p>
           </div>
         </div>
       </footer>
